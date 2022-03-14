@@ -1,0 +1,18 @@
+html {
+    width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.forms, .tabela {
+    display: inline;
+    width: 120px;
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+
+
