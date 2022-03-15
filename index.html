@@ -18,23 +18,22 @@
                     <div class="parte.um">
                         <label for="nome">Nome:</label>
                         <br>
-                        <input type="text" id="nome">
+                        <input type="text" name="txtNome">
                     </div>
 
                     <div class="parte.dois">
                         <label for="nome">Username:</label>
                         <br>
-                        <input type="text" id="username">
+                        <input type="text" name="txtUsername">
                     </div>
 
-                    <button>Add user</button>
-                    
+                    <button value="Adiciona dados" onclick="addPessoa(txtNome.value, txtUsername.value)">Add User</button>                    
 
                 </form>
             </div>
 
             <div class="tabela">
-                <table width= "400px" border="1">
+                <table width= "400px" border="1" id="tabelaDados">
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
