@@ -18,21 +18,27 @@
                     <div class="parte.um">
                         <label for="nome">Nome:</label>
                         <br>
-                        <input type="text" name="txtNome">
+                        <input id = "texto-nome" type="text" name="txtNome">
                     </div>
 
                     <div class="parte.dois">
                         <label for="nome">Username:</label>
                         <br>
-                        <input type="text" name="txtUsername">
+                        <input id = "texto-email" type="text" name="txtUsername">
                     </div>
 
-                    <button value="Adiciona dados" onclick="addPessoa(txtNome.value, txtUsername.value)">Add User</button>                    
-
+                    <!--<button value="Adiciona dados" onclick="addPessoa(txtNome.value, txtUsername.value)">Add User</button>
+                    -->                    
                 </form>
             </div>
 
-            <div class="tabela">
+            <div id="Adicionar">
+                <button id="botao-adicionar">
+                    Adicionar
+                </button>
+            </div>
+            
+            <!--<div class="tabela">
                 <table width= "400px" border="1" id="tabelaDados">
                     <tr>
                         <th>ID</th>
@@ -43,6 +49,11 @@
 
                 </table>
             </div>
+        </div> -->
+        <div id="tabela">
+            <table id="tabela-dados">
+                
+            </table>
         </div>
 
         <script src="index.js"></script>
