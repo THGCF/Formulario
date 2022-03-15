@@ -27,19 +27,24 @@ const nomeLista = document.createElement("tr");
         if (criarTextoNome === "") {
             return;
         }
+
         nomeLista.innerText = criarTextoNome;
-       dadosTabela.appendChild(nomeLista);
+        dadosTabela.appendChild(nomeLista);
         textoNome.value = null
     }
+
     function criarEmail() {
         const criarTextoEmail = textoEmail.value;
         if (criarTextoEmail === "") {
             return;
         }
+
         const emailLista = document.createElement("td");
         emailLista.innerText = criarTextoEmail;
         nomeLista.appendChild(emailLista);
         textoEmail.value = null
     }
+
     botao.addEventListener('click', criarNome); 
     botao.addEventListener('click', criarEmail);
+
