@@ -19,6 +19,7 @@ const textoNome = document.getElementById("texto-nome");
 const textoEmail = document.getElementById("texto-email");
 const dadosTabela = document.getElementById("tabela-dados");
 const botao = document.getElementById("botao-adicionar");
+const botaoRemover = document.getElementById("????");
 
 const nomeLista = document.createElement("tr");
 
@@ -48,3 +49,8 @@ const nomeLista = document.createElement("tr");
     botao.addEventListener('click', criarNome); 
     botao.addEventListener('click', criarEmail);
 
+//Removendo os dados
+
+    function criarBotaoRemovedor() {
+        const removerDados = botaoRemover.a
+    }
