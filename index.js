@@ -20,12 +20,13 @@ const textoEmail = document.getElementById("texto-email");
 const dadosTabela = document.getElementById("tabela-dados");
 const botao = document.getElementById("botao-adicionar");
 
+const nomeLista = document.createElement("tr");
+
     function criarNome() {
         const criarTextoNome = textoNome.value;
         if (criarTextoNome === "") {
             return;
         }
-        const nomeLista = document.createElement("tr");
         nomeLista.innerText = criarTextoNome;
        dadosTabela.appendChild(nomeLista);
         textoNome.value = null
@@ -37,7 +38,7 @@ const botao = document.getElementById("botao-adicionar");
         }
         const emailLista = document.createElement("td");
         emailLista.innerText = criarTextoEmail;
-        dadosTabela.appendChild(emailLista);
+        nomeLista.appendChild(emailLista);
         textoEmail.value = null
     }
     botao.addEventListener('click', criarNome); 
