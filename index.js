@@ -15,42 +15,67 @@
     //cellUsername = username;
 //}
 
-const textoNome = document.getElementById("texto-nome");
-const textoEmail = document.getElementById("texto-email");
-const dadosTabela = document.getElementById("tabela-dados");
-const botao = document.getElementById("botao-adicionar");
-const botaoRemover = document.getElementById("????");
+const inputTextoNome = document.getElementById("texto-nome");
+const inputTextoEmail = document.getElementById("texto-email");
+const corpoTabela = document.getElementById("tabela-dados");
+const botaoAdicionar = document.getElementById("botao-adicionar");
 
-const nomeLista = document.createElement("tr");
+//Cria a linha com as informações do formulário
 
-    function criarNome() {
-        const criarTextoNome = textoNome.value;
-        if (criarTextoNome === "") {
-            return;
-        }
+function criarUsuario() {
+    const criarTextoNome = inputTextoNome.value;
+    const criarTextoEmail = inputTextoEmail.value; 
+    const linhaDaTabela = document.createElement("tr");
+    
+    // Cria a coluna com o nome
 
-        nomeLista.innerText = criarTextoNome;
-        dadosTabela.appendChild(nomeLista);
-        textoNome.value = null
+    if (criarTextoNome === "") {
+        return;
+    }
+                
+    const nomeLista = document.createElement("td");
+    nomeLista.innerText = criarTextoNome;
+    linhaDaTabela.appendChild(nomeLista);
+    inputTextoNome.value = null;  
+    
+    // Cria a coluna com o e-mail
+
+    if (criarTextoEmail === "") {
+        return;
     }
 
-    function criarEmail() {
-        const criarTextoEmail = textoEmail.value;
-        if (criarTextoEmail === "") {
-            return;
-        }
+    const emailLista = document.createElement("td");
+    emailLista.innerText = criarTextoEmail;
+    linhaDaTabela.appendChild(emailLista);
+    inputTextoEmail.value = null;
 
-        const emailLista = document.createElement("td");
-        emailLista.innerText = criarTextoEmail;
-        nomeLista.appendChild(emailLista);
-        textoEmail.value = null
+    // Cria o botão para deletar
+
+    const botaoDelete = document.createElement("button");
+    botaoDelete.innerText = "Deletar";
+    linhaDaTabela.appendChild(botaoDelete);
+    
+    function deltarLinha() {
+        linhaDaTabela.remove()
+        
     }
+    botaoDelete.onclick = deltarLinha
 
-    botao.addEventListener('click', criarNome); 
-    botao.addEventListener('click', criarEmail);
+    // Apensa a linha criada no corpo da tabela feito no html
 
-//Removendo os dados
+    corpoTabela.appendChild(linhaDaTabela)
+}
 
-    function criarBotaoRemovedor() {
-        const removerDados = botaoRemover.a
+// Dispeso o evento para edicionar os dados na tabela pelo click
+
+botaoAdicionar.addEventListener('click', criarUsuario); 
+
+// Dispeso o evento para edicionar os dados na tabela pelo enter
+
+document.addEventListener("keypress", function(e){
+    if (e.key === "Enter") {
+        event.preventDefault();
+        botaoAdicionar.click();
     }
+}
+)
