@@ -1,6 +1,21 @@
 body {
-    width: 90%;
+    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin-left: 230px;
+    margin-top: 40px;
+    margin-bottom: -10px;
+    font-size: 40px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+
+label {
+    margin-bottom: 150px;
+    font-weight: 600;
 }
 
 .forms, .tabela {
@@ -13,6 +28,7 @@ body {
     justify-content: space-between;
     width: 70%;
     margin: 0 auto;
+    margin-top: 20px;
 }
 
 .parte-um, .parte-dois {
@@ -26,6 +42,7 @@ input {
     border: 1px solid #d1d1d1;
     border-radius: 4px;
     padding: 6px 10px;
+    margin-top: 15px;
 }
 
 #botao-adicionar {
@@ -42,5 +59,15 @@ input {
 }
 
 h3 {
-    width: 200px;
+    width: 300px;
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+#tabela-dados {
+    border-bottom: 1px solid #e1e1e1;
+    text-align: left;
+    padding: 12px 15px;
+    margin-top: 70px;
 }
